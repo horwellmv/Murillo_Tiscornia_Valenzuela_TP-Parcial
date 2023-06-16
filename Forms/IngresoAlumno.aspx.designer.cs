@@ -24,13 +24,13 @@ namespace Tp_Parcial_DesarrolloWeb
         protected global::System.Web.UI.HtmlControls.HtmlForm IngresoAlumnoForm;
 
         /// <summary>
-        /// apelllido control.
+        /// apellido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox apelllido;
+        protected global::System.Web.UI.WebControls.TextBox apellido;
 
         /// <summary>
         /// nombre control.
@@ -60,30 +60,30 @@ namespace Tp_Parcial_DesarrolloWeb
         protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
-        /// turno control.
+        /// lista_turno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList turno;
+        protected global::System.Web.UI.WebControls.DropDownList lista_turno;
 
         /// <summary>
-        /// btnEnviar control.
+        /// btn_enviar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviar;
+        protected global::System.Web.UI.WebControls.Button btn_enviar;
 
         /// <summary>
-        /// btnLimpiar control.
+        /// btn_limpiar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLimpiar;
+        protected global::System.Web.UI.WebControls.Button btn_limpiar;
     }
 }

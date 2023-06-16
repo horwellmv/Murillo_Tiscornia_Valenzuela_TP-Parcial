@@ -1,7 +1,84 @@
 ﻿
-/*Crear aquí los estilos del proyecto.
+/*  
+    crear las clases css con las siguientes instrucciones:
+
+    una clase para la etiqueta (<asp:Label>) tendrán como color de fondo azul (#0000FF), color de fuente verde (#00FF00), 
+    tamaño de 12 puntos y fuente Helvetica ( Arial como segunda opción).
+
+    una pseudo clase llamada ‘obligatorio’ para etiqueta (<asp:Label>) que cambiará el estilo colocando como color de fondo rojo (#FF0000), 
+    color de fuente blanco (#FFFFFF), el tamaño de la fuente en 14 puntos y el texto en negrita (bold).
+
+    una pseudo clase que se nombrará ‘preferencias’ (sólo para etiquetas <asp:Label>) que cambiará el color de fondo a verde (#00FF00), 
+    color de letra negra (#000000) y un tamaño de 8 puntos.
+    
+    una clase ‘enfocada’ (color de fondo #66CCFF, color de fuente #3333CC y tipo de fuente ‘Papyrus o Calibri como segunda opción).
+
+    una clase ‘desenfocada’ (color de fondo blanco, color de fuente negra y tipo de fuente ‘Arial’)..
 */
 
 body {
 
+}
+/* <asp:Label> */
+asp:Label {
+    background-color: #0000FF;
+    color: #00FF00;
+    font-size: 12pt;
+    font-family: Helvetica, Arial;
+}
+
+/* Obligatorio */
+label.obligatorio {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+/* Preferencias */
+.preferencias {
+    background-color: #00FF00;
+    color: #000000;
+    font-size: 8pt;
+}
+
+/* Desenfocar */
+.enfocada {
+    background-color: #66CCFF;
+    color: #3333CC;
+    font-family: Papyrus, Calibri;
+}
+
+/* Enfocar */
+.desenfocada {
+    background-color: white;
+    color: black;
+    font-family: Arial;
+}
+
+
+/*------------------------------ Estilos Tablas*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    text-align: right ;
 }
