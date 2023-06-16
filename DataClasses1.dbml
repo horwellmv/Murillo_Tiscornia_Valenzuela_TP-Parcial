@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_Instituto" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=HORWELL-LENOVO-;Initial Catalog=db_Instituto;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="db_InstitutoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.turnos" Member="turnos">
+    <Type Name="turno">
+      <Column Name="id_turno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="turno" Member="turno1" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="turno_alumno" Member="alumnos" ThisKey="id_turno" OtherKey="fk_turno" Type="alumno" />
+    </Type>
+  </Table>
+  <Table Name="dbo.comentarios" Member="comentarios">
+    <Type Name="comentario">
+      <Column Name="id_comentario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comentario" Member="comentario1" Type="System.String" DbType="VarChar(700) NOT NULL" CanBeNull="false" />
+      <Column Name="fk_alumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="alumno_comentario" Member="alumno" ThisKey="fk_alumno" OtherKey="id_alumno" Type="alumno" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.alumnos" Member="alumnos">
+    <Type Name="alumno">
+      <Column Name="id_alumno" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dni" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fk_turno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="alumno_comentario" Member="comentarios" ThisKey="id_alumno" OtherKey="fk_alumno" Type="comentario" />
+      <Association Name="turno_alumno" Member="turno" ThisKey="fk_turno" OtherKey="id_turno" Type="turno" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
