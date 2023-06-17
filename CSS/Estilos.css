@@ -8,7 +8,7 @@
     una pseudo clase llamada ‘obligatorio’ para etiqueta (<asp:Label>) que cambiará el estilo colocando como color de fondo rojo (#FF0000), 
     color de fuente blanco (#FFFFFF), el tamaño de la fuente en 14 puntos y el texto en negrita (bold).
 
-    una pseudo clase que se nombrará ‘preferencias’ (sólo para etiquetas <asp:Label>) que cambiará el color de fondo a verde (#00FF00), 
+    una pseudo clase llamada ‘preferencias’ para etiquetas ( <asp:Label>) que cambiará el color de fondo a verde (#00FF00), 
     color de letra negra (#000000) y un tamaño de 8 puntos.
     
     una clase ‘enfocada’ (color de fondo #66CCFF, color de fuente #3333CC y tipo de fuente ‘Papyrus o Calibri como segunda opción).
@@ -19,16 +19,18 @@
 body {
 
 }
+
 /* <asp:Label> */
-asp:Label {
+label {
     background-color: #0000FF;
     color: #00FF00;
     font-size: 12pt;
     font-family: Helvetica, Arial;
+    width :max-content ;
 }
 
 /* Obligatorio */
-label.obligatorio {
+label .obligatorio {
     background-color: #FF0000;
     color: #FFFFFF;
     font-size: 14pt;
@@ -36,7 +38,7 @@ label.obligatorio {
 }
 
 /* Preferencias */
-.preferencias {
+label .preferencias {
     background-color: #00FF00;
     color: #000000;
     font-size: 8pt;
@@ -56,23 +58,26 @@ label.obligatorio {
     font-family: Arial;
 }
 
+/*------------------------------------------ ESTILOS DE LA TABLA
 
-/*------------------------------ Estilos Tablas*/
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+*/
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 40%;
+    width: 60%;
+    background-color: aliceblue;
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
+    text-align: center ;
+    padding: 4px;
 }
 
 table, th, td {

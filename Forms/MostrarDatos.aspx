@@ -9,25 +9,34 @@
 <body>
     <form id="MostrarDatosForm" runat="server">
         <div>
-            <h1 style="margin-left: 220px">Listado de Datos</h1>
-            <p style="margin-left: 200px">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre:&nbsp;&nbsp;
-                <asp:TextBox ID="nombre" runat="server" Width="190px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 200px; width: 308px;">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comentario:<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="comentario" runat="server" Height="156px" Style="margin-left: 0px" Width="275px"></asp:TextBox>
-            </p>
-            <p style="margin-left: 200px">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEnviarComentario" runat="server" Text="Comentar" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnLimpiarComentario" runat="server" Text="Limpiar" />
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <br />
-            </p>
+            <h1>Mostrar Datos</h1>
+            
+            
+          
+        </div>
+
+        <div>
+            <asp:GridView ID="GridView_alumnos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:ButtonField ButtonType="Button" CommandName="Delete" HeaderText="#" ShowHeader="false" Text="Eliminar" />
+                </Columns>
+                <EditRowStyle BackColor="#7C6F57" />
+                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#E3EAEB" />
+                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                <SortedAscendingHeaderStyle BackColor="#246B61" />
+                <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                <SortedDescendingHeaderStyle BackColor="#15524A" />
+            </asp:GridView>
+        </div>
+        <br />
+        <div >
+            <asp:TextBox TextMode="MultiLine" Columns="65" Rows="3" ID="comentario_textbox"  runat="server"></asp:TextBox>
+            <asp:Button ID="btn_enviar_Coment" runat="server" Text="Comentar" OnClick="btn_enviar_Coment_Click" />
         </div>
     </form>
 </body>

@@ -79,10 +79,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataClasses1.designer.cs">
+    <Compile Include="Data_db_Instituto.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DependentUpon>Data_db_Instituto.dbml</DependentUpon>
     </Compile>
     <Compile Include="Forms\ListadoComentarios.aspx.cs">
       <DependentUpon>ListadoComentarios.aspx</DependentUpon>
@@ -111,13 +111,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataClasses1.dbml">
+    <Content Include="Data_db_Instituto.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <LastGenOutput>Data_db_Instituto.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    <None Include="Data_db_Instituto.dbml.layout">
+      <DependentUpon>Data_db_Instituto.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

@@ -22,82 +22,82 @@ namespace Tp_Parcial_DesarrolloWeb
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="db_Instituto")]
-	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="db_instituto")]
+	public partial class Data_db_InstitutoDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Insertturno(turno instance);
-    partial void Updateturno(turno instance);
-    partial void Deleteturno(turno instance);
-    partial void Insertcomentario(comentario instance);
-    partial void Updatecomentario(comentario instance);
-    partial void Deletecomentario(comentario instance);
-    partial void Insertalumno(alumno instance);
-    partial void Updatealumno(alumno instance);
-    partial void Deletealumno(alumno instance);
+    partial void InsertTurno(Turno instance);
+    partial void UpdateTurno(Turno instance);
+    partial void DeleteTurno(Turno instance);
+    partial void InsertAlumno(Alumno instance);
+    partial void UpdateAlumno(Alumno instance);
+    partial void DeleteAlumno(Alumno instance);
+    partial void InsertComentario(Comentario instance);
+    partial void UpdateComentario(Comentario instance);
+    partial void DeleteComentario(Comentario instance);
     #endregion
 		
-		public DataClasses1DataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["db_InstitutoConnectionString"].ConnectionString, mappingSource)
+		public Data_db_InstitutoDataContext() : 
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["db_institutoConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection) : 
+		public Data_db_InstitutoDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection) : 
+		public Data_db_InstitutoDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public Data_db_InstitutoDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClasses1DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public Data_db_InstitutoDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<turno> turnos
+		public System.Data.Linq.Table<Turno> Turnos
 		{
 			get
 			{
-				return this.GetTable<turno>();
+				return this.GetTable<Turno>();
 			}
 		}
 		
-		public System.Data.Linq.Table<comentario> comentarios
+		public System.Data.Linq.Table<Alumno> Alumnos
 		{
 			get
 			{
-				return this.GetTable<comentario>();
+				return this.GetTable<Alumno>();
 			}
 		}
 		
-		public System.Data.Linq.Table<alumno> alumnos
+		public System.Data.Linq.Table<Comentario> Comentarios
 		{
 			get
 			{
-				return this.GetTable<alumno>();
+				return this.GetTable<Comentario>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.turnos")]
-	public partial class turno : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Turnos")]
+	public partial class Turno : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -106,7 +106,7 @@ namespace Tp_Parcial_DesarrolloWeb
 		
 		private string _turno1;
 		
-		private EntitySet<alumno> _alumnos;
+		private EntitySet<Alumno> _Alumnos;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -118,9 +118,9 @@ namespace Tp_Parcial_DesarrolloWeb
     partial void Onturno1Changed();
     #endregion
 		
-		public turno()
+		public Turno()
 		{
-			this._alumnos = new EntitySet<alumno>(new Action<alumno>(this.attach_alumnos), new Action<alumno>(this.detach_alumnos));
+			this._Alumnos = new EntitySet<Alumno>(new Action<Alumno>(this.attach_Alumnos), new Action<Alumno>(this.detach_Alumnos));
 			OnCreated();
 		}
 		
@@ -164,16 +164,16 @@ namespace Tp_Parcial_DesarrolloWeb
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="turno_alumno", Storage="_alumnos", ThisKey="id_turno", OtherKey="fk_turno")]
-		public EntitySet<alumno> alumnos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Turno_Alumno", Storage="_Alumnos", ThisKey="id_turno", OtherKey="fk_turno")]
+		public EntitySet<Alumno> Alumnos
 		{
 			get
 			{
-				return this._alumnos;
+				return this._Alumnos;
 			}
 			set
 			{
-				this._alumnos.Assign(value);
+				this._Alumnos.Assign(value);
 			}
 		}
 		
@@ -197,179 +197,28 @@ namespace Tp_Parcial_DesarrolloWeb
 			}
 		}
 		
-		private void attach_alumnos(alumno entity)
+		private void attach_Alumnos(Alumno entity)
 		{
 			this.SendPropertyChanging();
-			entity.turno = this;
+			entity.Turno = this;
 		}
 		
-		private void detach_alumnos(alumno entity)
+		private void detach_Alumnos(Alumno entity)
 		{
 			this.SendPropertyChanging();
-			entity.turno = null;
+			entity.Turno = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.comentarios")]
-	public partial class comentario : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_comentario;
-		
-		private string _comentario1;
-		
-		private int _fk_alumno;
-		
-		private EntityRef<alumno> _alumno;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_comentarioChanging(int value);
-    partial void Onid_comentarioChanged();
-    partial void Oncomentario1Changing(string value);
-    partial void Oncomentario1Changed();
-    partial void Onfk_alumnoChanging(int value);
-    partial void Onfk_alumnoChanged();
-    #endregion
-		
-		public comentario()
-		{
-			this._alumno = default(EntityRef<alumno>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_comentario", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id_comentario
-		{
-			get
-			{
-				return this._id_comentario;
-			}
-			set
-			{
-				if ((this._id_comentario != value))
-				{
-					this.Onid_comentarioChanging(value);
-					this.SendPropertyChanging();
-					this._id_comentario = value;
-					this.SendPropertyChanged("id_comentario");
-					this.Onid_comentarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="comentario", Storage="_comentario1", DbType="VarChar(700) NOT NULL", CanBeNull=false)]
-		public string comentario1
-		{
-			get
-			{
-				return this._comentario1;
-			}
-			set
-			{
-				if ((this._comentario1 != value))
-				{
-					this.Oncomentario1Changing(value);
-					this.SendPropertyChanging();
-					this._comentario1 = value;
-					this.SendPropertyChanged("comentario1");
-					this.Oncomentario1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fk_alumno", DbType="Int NOT NULL")]
-		public int fk_alumno
-		{
-			get
-			{
-				return this._fk_alumno;
-			}
-			set
-			{
-				if ((this._fk_alumno != value))
-				{
-					if (this._alumno.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onfk_alumnoChanging(value);
-					this.SendPropertyChanging();
-					this._fk_alumno = value;
-					this.SendPropertyChanged("fk_alumno");
-					this.Onfk_alumnoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="alumno_comentario", Storage="_alumno", ThisKey="fk_alumno", OtherKey="id_alumno", IsForeignKey=true)]
-		public alumno alumno
-		{
-			get
-			{
-				return this._alumno.Entity;
-			}
-			set
-			{
-				alumno previousValue = this._alumno.Entity;
-				if (((previousValue != value) 
-							|| (this._alumno.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._alumno.Entity = null;
-						previousValue.comentarios.Remove(this);
-					}
-					this._alumno.Entity = value;
-					if ((value != null))
-					{
-						value.comentarios.Add(this);
-						this._fk_alumno = value.id_alumno;
-					}
-					else
-					{
-						this._fk_alumno = default(int);
-					}
-					this.SendPropertyChanged("alumno");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.alumnos")]
-	public partial class alumno : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Alumnos")]
+	public partial class Alumno : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id_alumno;
 		
-		private int _dni;
+		private string _dni;
 		
 		private string _nombre;
 		
@@ -379,9 +228,9 @@ namespace Tp_Parcial_DesarrolloWeb
 		
 		private int _fk_turno;
 		
-		private EntitySet<comentario> _comentarios;
+		private EntitySet<Comentario> _Comentarios;
 		
-		private EntityRef<turno> _turno;
+		private EntityRef<Turno> _Turno;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -389,7 +238,7 @@ namespace Tp_Parcial_DesarrolloWeb
     partial void OnCreated();
     partial void Onid_alumnoChanging(int value);
     partial void Onid_alumnoChanged();
-    partial void OndniChanging(int value);
+    partial void OndniChanging(string value);
     partial void OndniChanged();
     partial void OnnombreChanging(string value);
     partial void OnnombreChanged();
@@ -401,10 +250,10 @@ namespace Tp_Parcial_DesarrolloWeb
     partial void Onfk_turnoChanged();
     #endregion
 		
-		public alumno()
+		public Alumno()
 		{
-			this._comentarios = new EntitySet<comentario>(new Action<comentario>(this.attach_comentarios), new Action<comentario>(this.detach_comentarios));
-			this._turno = default(EntityRef<turno>);
+			this._Comentarios = new EntitySet<Comentario>(new Action<Comentario>(this.attach_Comentarios), new Action<Comentario>(this.detach_Comentarios));
+			this._Turno = default(EntityRef<Turno>);
 			OnCreated();
 		}
 		
@@ -428,8 +277,8 @@ namespace Tp_Parcial_DesarrolloWeb
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dni", DbType="Int NOT NULL")]
-		public int dni
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dni", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string dni
 		{
 			get
 			{
@@ -519,7 +368,7 @@ namespace Tp_Parcial_DesarrolloWeb
 			{
 				if ((this._fk_turno != value))
 				{
-					if (this._turno.HasLoadedOrAssignedValue)
+					if (this._Turno.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -532,49 +381,49 @@ namespace Tp_Parcial_DesarrolloWeb
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="alumno_comentario", Storage="_comentarios", ThisKey="id_alumno", OtherKey="fk_alumno")]
-		public EntitySet<comentario> comentarios
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Comentario", Storage="_Comentarios", ThisKey="id_alumno", OtherKey="fk_alumno")]
+		public EntitySet<Comentario> Comentarios
 		{
 			get
 			{
-				return this._comentarios;
+				return this._Comentarios;
 			}
 			set
 			{
-				this._comentarios.Assign(value);
+				this._Comentarios.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="turno_alumno", Storage="_turno", ThisKey="fk_turno", OtherKey="id_turno", IsForeignKey=true)]
-		public turno turno
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Turno_Alumno", Storage="_Turno", ThisKey="fk_turno", OtherKey="id_turno", IsForeignKey=true)]
+		public Turno Turno
 		{
 			get
 			{
-				return this._turno.Entity;
+				return this._Turno.Entity;
 			}
 			set
 			{
-				turno previousValue = this._turno.Entity;
+				Turno previousValue = this._Turno.Entity;
 				if (((previousValue != value) 
-							|| (this._turno.HasLoadedOrAssignedValue == false)))
+							|| (this._Turno.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._turno.Entity = null;
-						previousValue.alumnos.Remove(this);
+						this._Turno.Entity = null;
+						previousValue.Alumnos.Remove(this);
 					}
-					this._turno.Entity = value;
+					this._Turno.Entity = value;
 					if ((value != null))
 					{
-						value.alumnos.Add(this);
+						value.Alumnos.Add(this);
 						this._fk_turno = value.id_turno;
 					}
 					else
 					{
 						this._fk_turno = default(int);
 					}
-					this.SendPropertyChanged("turno");
+					this.SendPropertyChanged("Turno");
 				}
 			}
 		}
@@ -599,16 +448,167 @@ namespace Tp_Parcial_DesarrolloWeb
 			}
 		}
 		
-		private void attach_comentarios(comentario entity)
+		private void attach_Comentarios(Comentario entity)
 		{
 			this.SendPropertyChanging();
-			entity.alumno = this;
+			entity.Alumno = this;
 		}
 		
-		private void detach_comentarios(comentario entity)
+		private void detach_Comentarios(Comentario entity)
 		{
 			this.SendPropertyChanging();
-			entity.alumno = null;
+			entity.Alumno = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Comentarios")]
+	public partial class Comentario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id_comentario;
+		
+		private string _comentario1;
+		
+		private int _fk_alumno;
+		
+		private EntityRef<Alumno> _Alumno;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onid_comentarioChanging(int value);
+    partial void Onid_comentarioChanged();
+    partial void Oncomentario1Changing(string value);
+    partial void Oncomentario1Changed();
+    partial void Onfk_alumnoChanging(int value);
+    partial void Onfk_alumnoChanged();
+    #endregion
+		
+		public Comentario()
+		{
+			this._Alumno = default(EntityRef<Alumno>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_comentario", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_comentario
+		{
+			get
+			{
+				return this._id_comentario;
+			}
+			set
+			{
+				if ((this._id_comentario != value))
+				{
+					this.Onid_comentarioChanging(value);
+					this.SendPropertyChanging();
+					this._id_comentario = value;
+					this.SendPropertyChanged("id_comentario");
+					this.Onid_comentarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="comentario", Storage="_comentario1", DbType="VarChar(700) NOT NULL", CanBeNull=false)]
+		public string comentario1
+		{
+			get
+			{
+				return this._comentario1;
+			}
+			set
+			{
+				if ((this._comentario1 != value))
+				{
+					this.Oncomentario1Changing(value);
+					this.SendPropertyChanging();
+					this._comentario1 = value;
+					this.SendPropertyChanged("comentario1");
+					this.Oncomentario1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fk_alumno", DbType="Int NOT NULL")]
+		public int fk_alumno
+		{
+			get
+			{
+				return this._fk_alumno;
+			}
+			set
+			{
+				if ((this._fk_alumno != value))
+				{
+					if (this._Alumno.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onfk_alumnoChanging(value);
+					this.SendPropertyChanging();
+					this._fk_alumno = value;
+					this.SendPropertyChanged("fk_alumno");
+					this.Onfk_alumnoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Comentario", Storage="_Alumno", ThisKey="fk_alumno", OtherKey="id_alumno", IsForeignKey=true)]
+		public Alumno Alumno
+		{
+			get
+			{
+				return this._Alumno.Entity;
+			}
+			set
+			{
+				Alumno previousValue = this._Alumno.Entity;
+				if (((previousValue != value) 
+							|| (this._Alumno.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Alumno.Entity = null;
+						previousValue.Comentarios.Remove(this);
+					}
+					this._Alumno.Entity = value;
+					if ((value != null))
+					{
+						value.Comentarios.Add(this);
+						this._fk_alumno = value.id_alumno;
+					}
+					else
+					{
+						this._fk_alumno = default(int);
+					}
+					this.SendPropertyChanged("Alumno");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

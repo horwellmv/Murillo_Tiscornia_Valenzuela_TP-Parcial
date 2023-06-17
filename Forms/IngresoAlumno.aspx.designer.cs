@@ -24,49 +24,112 @@ namespace Tp_Parcial_DesarrolloWeb
         protected global::System.Web.UI.HtmlControls.HtmlForm IngresoAlumnoForm;
 
         /// <summary>
-        /// apellido control.
+        /// Label_Obligatorio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox apellido;
+        protected global::System.Web.UI.WebControls.Label Label_Obligatorio;
 
         /// <summary>
-        /// nombre control.
+        /// apellidoLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.Label apellidoLabel;
 
         /// <summary>
-        /// dni control.
+        /// apellidoTextbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dni;
+        protected global::System.Web.UI.WebControls.TextBox apellidoTextbox;
 
         /// <summary>
-        /// email control.
+        /// nombrelabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.Label nombrelabel;
 
         /// <summary>
-        /// lista_turno control.
+        /// nombreTextbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList lista_turno;
+        protected global::System.Web.UI.WebControls.TextBox nombreTextbox;
+
+        /// <summary>
+        /// dniLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dniLabel;
+
+        /// <summary>
+        /// dniTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dniTextbox;
+
+        /// <summary>
+        /// emailLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label emailLabel;
+
+        /// <summary>
+        /// emailTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox emailTextbox;
+
+        /// <summary>
+        /// Label_Preferencias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Preferencias;
+
+        /// <summary>
+        /// turnoLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label turnoLabel;
+
+        /// <summary>
+        /// turnoDropList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList turnoDropList;
 
         /// <summary>
         /// btn_enviar control.
@@ -76,14 +139,5 @@ namespace Tp_Parcial_DesarrolloWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_enviar;
-
-        /// <summary>
-        /// btn_limpiar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_limpiar;
     }
 }

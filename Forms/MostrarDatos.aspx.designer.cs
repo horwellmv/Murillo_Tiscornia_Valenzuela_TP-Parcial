@@ -24,39 +24,30 @@ namespace Tp_Parcial_DesarrolloWeb
         protected global::System.Web.UI.HtmlControls.HtmlForm MostrarDatosForm;
 
         /// <summary>
-        /// nombre control.
+        /// GridView_alumnos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.GridView GridView_alumnos;
 
         /// <summary>
-        /// comentario control.
+        /// comentario_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox comentario;
+        protected global::System.Web.UI.WebControls.TextBox comentario_textbox;
 
         /// <summary>
-        /// btnEnviarComentario control.
+        /// btn_enviar_Coment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviarComentario;
-
-        /// <summary>
-        /// btnLimpiarComentario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLimpiarComentario;
+        protected global::System.Web.UI.WebControls.Button btn_enviar_Coment;
     }
 }
