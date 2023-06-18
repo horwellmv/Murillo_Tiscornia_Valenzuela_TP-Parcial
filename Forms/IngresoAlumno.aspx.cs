@@ -39,7 +39,7 @@ namespace Tp_Parcial_DesarrolloWeb
             catch (Exception)
             {
 
-                throw new Exception("Error al crear query de alumno a BD.");
+                throw;
             }
         }
     }
