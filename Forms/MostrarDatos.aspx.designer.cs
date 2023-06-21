@@ -33,13 +33,22 @@ namespace Tp_Parcial_DesarrolloWeb
         protected global::System.Web.UI.WebControls.GridView GridView_alumnos;
 
         /// <summary>
-        /// comentario_textbox control.
+        /// txtId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox comentario_textbox;
+        protected global::System.Web.UI.WebControls.TextBox txtId;
+
+        /// <summary>
+        /// Txt_Comentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txt_Comentario;
 
         /// <summary>
         /// btn_enviar_Coment control.

@@ -16,27 +16,38 @@
         </div>
 
         <div>
-            <asp:GridView ID="GridView_alumnos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+            
+            <asp:GridView ID="GridView_alumnos" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="id_alumno" OnRowEditing="GridView_alumnos_RowEditing" OnRowUpdating="GridView_alumnos_RowUpdating">
+
+
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:ButtonField ButtonType="Button" CommandName="Delete" HeaderText="#" ShowHeader="false" Text="Eliminar" />
+                    <asp:BoundField DataField="id_alumno" HeaderText="ID" ReadOnly="True" />
+                    <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                    <asp:BoundField DataField="apellido" HeaderText="Apellido" />
+                    <asp:BoundField DataField="dni" HeaderText="DNI" />
+                    <asp:BoundField DataField="email" HeaderText="Email" />
                 </Columns>
-                <EditRowStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                <SortedAscendingHeaderStyle BackColor="#246B61" />
-                <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                <SortedDescendingHeaderStyle BackColor="#15524A" />
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
+            
         </div>
+
         <br />
         <div >
-            <asp:TextBox TextMode="MultiLine" Columns="65" Rows="3" ID="comentario_textbox"  runat="server"></asp:TextBox>
-            <asp:Button ID="btn_enviar_Coment" runat="server" Text="Comentar" OnClick="btn_enviar_Coment_Click" />
+            <asp:Label Text="Id Alumno" runat="server" /><br />
+            <asp:TextBox ID="txtId" type="number" Width="30px" runat="server" />  <br />
+            <asp:TextBox ID="Txt_Comentario" TextMode="MultiLine" Columns="65" Rows="3"  runat="server" />
+            <asp:Button ID="btn_enviar_Coment" runat="server" Text="Comentar" OnClientClick=" retur validarId()" OnClick="btn_enviar_Coment_Click" />
         </div>
     </form>
 </body>
