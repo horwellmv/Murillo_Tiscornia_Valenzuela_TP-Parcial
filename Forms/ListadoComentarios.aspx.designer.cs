@@ -24,12 +24,21 @@ namespace Tp_Parcial_DesarrolloWeb
         protected global::System.Web.UI.HtmlControls.HtmlForm listadoComentariosForm;
 
         /// <summary>
-        /// listaComentarios control.
+        /// Grid_Comentarios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView listaComentarios;
+        protected global::System.Web.UI.WebControls.GridView Grid_Comentarios;
+
+        /// <summary>
+        /// btn_regresar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_regresar;
     }
 }
