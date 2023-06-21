@@ -27,9 +27,7 @@ namespace Tp_Parcial_DesarrolloWeb
                 alumno.apellido = apellidoTextbox.Text;
                 alumno.dni = dniTextbox.Text;
                 alumno.email = emailTextbox.Text;
-                alumno.fk_turno = turnoDropList.SelectedIndex;
-
-                Console.WriteLine(alumno.email, alumno.dni);
+                alumno.fk_turno =Convert.ToInt32(turnoDropList.SelectedValue) ;
 
                 db_context.Alumnos.InsertOnSubmit(alumno);
                 db_context.SubmitChanges();

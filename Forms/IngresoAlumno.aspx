@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Ingreso de alumnos</title>
     <script type ="text/javascript" src ="../JavaScript/IngresoAlumno.aspx.js"></script>
-    <link href ="../CSS/Estilos.css" rel="stylesheet" type ="text/css" />
+    <link href="../CSS/Estilos.css" rel="stylesheet" type ="text/css" />
 
 </head>
 <body>
@@ -19,7 +19,7 @@
                     <th colspan="5">Datos Personales</th>
                 </tr>
                 <tr>
-                    <th rowspan="2"> <asp:Label ID="Label_Obligatorio" runat="server" Text="Datos Obligatorios"></asp:Label> </th>
+                    <th rowspan="2" > <asp:Label CssClass="obligatorio" ID="Label_Obligatorio" runat="server" Text="Datos Obligatorios"></asp:Label> </th>
                     <td> <asp:Label CssClass ="obligatorio " ID="apellidoLabel" runat="server" Text="Apellido"></asp:Label> </td>
                     <td> <asp:TextBox  CssClass ="desenfocada" Type="text" ID="apellidoTextbox" runat="server"></asp:TextBox> </td>
                     <td> <asp:Label  CssClass ="obligatorio " ID="nombrelabel" runat="server" Text="Nombre"></asp:Label> </td>
@@ -47,7 +47,7 @@
 
                 <tr>
                     <td colspan="5">
-                        <asp:Button ID="btn_enviar" runat="server" Text="Enviar" OnClick="btn_enviar_Click" /> 
+                        <asp:Button ID="btn_enviar" runat="server" Text="Enviar" OnClientClick="return validarCampos()" OnClick="btn_enviar_Click" /> 
                         <input  type="reset" value="Limpiar" />
                     </td>
                 </tr>
